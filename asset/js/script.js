@@ -2,7 +2,7 @@
 	var scotchApp = angular.module('myApp', ['ngRoute']);
 
 	// configure our routes
-	scotchApp.config(function($routeProvider) {
+	myApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page

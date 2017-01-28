@@ -1,33 +1,31 @@
-	// create the module and name it scotchApp
-	var myApp = angular.module('myApp', ['ngRoute']);
+	var myApp = angular.module('myApp', ['ngRoute','ngAnimate']);
 
-	// configure our routes
 	myApp.config(function($routeProvider) {
 		$routeProvider
 
-			// route for the home page
 			.when('/', {
 				templateUrl : 'pages/home.html',
 				controller  : 'mainController'
 			})
 
-			// route for the about page
+			
 			.when('/about', {
 				templateUrl : 'pages/about.html',
 				controller  : 'aboutController'
 			})
 
-			// route for the contact page
+			
 			.when('/contact', {
 				templateUrl : 'pages/contact.html',
 				controller  : 'contactController'
 			});
 	});
 
-	// create the controller and inject Angular's $scope
 	myApp.controller('mainController', function($scope) {
-		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
+		$scope.slide=[
+			{image : 'img/blibli-future.jpg',description : 'Program Future Blibli'},
+			{image : 'img/igprad.jpg',description : 'This is me'}
+		];
 	});
 
 	myApp.controller('aboutController', function($scope) {

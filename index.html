@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 
-<!-- define angular app -->
 <html ng-app="myApp">
 
 <head>
-  <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
-  <!-- SPELLS -->
   <script src="asset/js/angular.min.js"></script>
+  <script src="asset/js/angular-animate.min.js"></script>
   <script src="asset/js/angular-route.js"></script>
   <script src="asset/js/script.js"></script>
-
+  <title>AldiPradana-Portofolio</title>
 </head>
 
-<!-- define angular controller -->
 <body ng-controller="mainController">
 
   <nav class="navbar navbar-default">
@@ -33,17 +30,15 @@
   </nav>
 
   <div id="main">
-  
-    <!-- angular templating -->
-		<!-- this is where content will be injected -->
+  <div class="jumbotron text-center">
     <div ng-view></div>
-    
+  </div>  
   </div>
   
   <footer class="text-center">
-    <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
+    <p>Join me in : <a href="https://github.com/igprad">Github</a></p>
   
-    <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
+    <p>Find me on : <a href="https://www.facebook.com/ignatius.a.pradana">Facebook</a></p>
   </footer>
   
 </body>

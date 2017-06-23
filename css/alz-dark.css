@@ -14,12 +14,12 @@ html {
 .tittle-progress-bar {
   display: inline-block;
   position: absolute;
-  right: 32%;
-  left: 32%;
+  right: 0%;
+  left: 0%;
   top: 66%;
   text-align: center;
   color: white;
-  font-size: 12pt;
+  font-size: 8pt;
   letter-spacing: 5px;
   animation-name: loading-text;
   animation-direction: alternate;
@@ -58,7 +58,7 @@ html {
 }
 
 .upper {
-  margin-top: 100px;
+  top: 14%;
   position: absolute;
   border: 1.5px solid white;
   left: 32%;
@@ -75,13 +75,13 @@ html {
   top:0;
   left:50%;
   bottom:0; margin:0;
-  height: 100px;
+  height: 14%;
   border:none;
   border-right:solid 1.5px white;
 }
 
 #content>.upper-content{
-  margin-top: 100px;
+  top: 14%;
   position: absolute;
   border: 1.5px solid white;
   left: 32%;
@@ -205,7 +205,7 @@ html {
 
 @keyframes preloading-content {
   100%{
-    margin-top: 250px;
+    top: 35%;
     left: 25%;
     right: 45%;
   }

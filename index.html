@@ -13,18 +13,62 @@
 </head>
 
 <body>
-  <div class="vertical-line paralax"></div>
-  <div class="upper">
-    <div class="title">
-      <h1>Hello, there !</h1>
-      <p>I'm Ignatius Aldi Pradana. A Freelancer and Developer from Indonesia</p>
+
+  <div class="opening">
+    <div class="vertical-line"></div>
+    <div class="upper">
+      <div class="title">
+        <h1>Hello, there !</h1>
+        <p>I'm Ignatius Aldi Pradana. A Freelancer and Developer from Indonesia</p>
+      </div>
     </div>
+    <div class="tittle-progress-bar"><p>Please Wait</p></div>
+    <div class="progress-bar"><span id="value-bar" class="value-progress"></span></div>
   </div>
-  <div class="tittle-progress-bar"><p>Loading... Please Wait</p></div>
-  <div class="progress-bar"><span class="value-progress"></span></div>
+
+  <div id="content">
+    <div class="vertical-line-content"></div>
+    <div class="upper-content">
+      <div class="title">
+        <h1>Hello, there</h1>
+        <p>I'm Ignatius Aldi Pradana. A Freelancer and Developer from Indonesia</p>
+      </div>
+    </div>
+    <div class="menu">
+        <div class="menu-profile-non-aktif">
+          <h4 class="title">Profile</h4>
+        </div>
+        <div class="menu-work-non-aktif">
+          <h4 class="title">My Work</h4>
+        </div>
+      </div>
+  </div>
+
 </body>
 
-<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $("#content").hide();
+    $(".menu").hide();
+
+    setTimeout(function(){ 
+        $(".opening").fadeOut(1500);
+        $(".opening").hide();
+
+        $("#content").show();
+    }, 6000);  
+
+    setTimeout(function(){ 
+        $(".menu").show();
+        $(".menu-work-non-aktif").removeClass('menu-work-non-aktif').addClass('menu-work');
+        $(".menu-profile-non-aktif").removeClass('menu-profile-non-aktif').addClass('menu-profile');
+    }, 8000);  
+  });
+
+</script>
 
 </html>

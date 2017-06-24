@@ -80,6 +80,35 @@ html {
   border-right:solid 1.5px white;
 }
 
+.menu-choosen {
+  position: absolute;
+  border: 1.5px solid white;
+  color: white;
+  top: 35%;
+  left: 25%;
+  right: 45%;
+}
+
+.menu-choosen-profile {
+    position: absolute;
+    top: 37%;
+    border-right: 1.5px solid white;
+    left: 55%;
+    right: 25%;
+    color: white;
+    opacity: 1;
+}
+
+.menu-choosen-work {
+    position: absolute;
+    top: 44%;
+    border-right: 1.5px solid white;
+    left: 55%;
+    right: 25%;
+    color: white;
+    opacity: 1;
+}
+
 #content>.upper-content{
   top: 14%;
   position: absolute;
@@ -113,21 +142,30 @@ html {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   position: absolute;
-  top: 35%;
+  top: 37%;
   border-right: 1.5px solid white;
   left: 32%;
   right: 32%;
   color: white;
+  opacity: 0;
 }
 
 #content>.menu>.menu-work{  
   position: absolute;
-  top: 45%;
+  top: 44%;
   border-right: 1.5px solid white;
   left: 32%;
   right: 32%;
   color: white;
   animation-name: pop-up-menu-work;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.menu-choosen, .menu-choosen-work, .menu-choosen-profile{
+  animation-name: menu-choosen;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -221,23 +259,36 @@ html {
 }
 
 @keyframes pop-up-menu-profile {
-  100%{
+  to{
     position: absolute;
     top: 37%;
     border-right: 1.5px solid white;
     left: 55%;
     right: 25%;
     color: white;
+    opacity: 1;
   }
 }
 
 @keyframes pop-up-menu-work {
   100%{
     position: absolute;
-    top: 47%;
+    top: 44%;
     border-right: 1.5px solid white;
     left: 55%;
     right: 25%;
     color: white;
+    opacity: 1;
   }
+}
+
+@keyframes menu-choosen {
+    0%{
+      opacity: 1;
+    }
+
+    100%{
+      top: 60%;
+      opacity: 0;
+    }
 }

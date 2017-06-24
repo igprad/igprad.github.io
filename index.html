@@ -44,6 +44,10 @@
       </div>
   </div>
 
+  <div id="myProfile"></div>
+
+  <div id="myWork"></div>
+
 </body>
 
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -53,6 +57,8 @@
 
   $(document).ready(function(){
     $("#content").hide();
+    $("#myProfile").hide();
+    $("#myWork").hide();
     $(".menu").hide();
 
     setTimeout(function(){ 
@@ -66,7 +72,23 @@
         $(".menu").show();
         $(".menu-work-non-aktif").removeClass('menu-work-non-aktif').addClass('menu-work');
         $(".menu-profile-non-aktif").removeClass('menu-profile-non-aktif').addClass('menu-profile');
-    }, 8000);  
+        
+        $(".menu-profile").click(function(){
+          $(".menu-work").removeClass('menu-work').addClass("menu-choosen-work");
+          $(".upper-content").removeClass('upper-content').addClass("menu-choosen");
+
+          $("#myProfile").show();
+        });
+
+        $(".menu-work").click(function(){
+          $(".menu-profile").removeClass('menu-profile').addClass("menu-choosen-profile");
+          $(".upper-content").removeClass('upper-content').addClass("menu-choosen");
+
+          $("#myProfile").show();
+        });
+
+    }, 8000);
+    
   });
 
 </script>

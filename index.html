@@ -28,6 +28,13 @@
 
   <div id="content">
     <div class="vertical-line-content"></div>
+    <div class="myContact">
+      <span class="fb"></span>
+      <span class="ln"></span>
+      <span class="contact"></span>
+      <span class="github"></span>
+    </div>
+    <div class="myCV">Curriculum Vitae</div>
     <div class="upper-content">
       <div class="title">
         <h1>Hello, there</h1>
@@ -44,9 +51,22 @@
       </div>
   </div>
 
-  <div id="myProfile"></div>
+  <div id="myProfile">
+    <div class="pre-detail-profile"></div>
+    <div class="btn-back-profile">Back</div>
+    <div class="myProfile-Content">
+      <p>Sorry, under construction</p>
+    </div>
+  </div>
+  </div>
 
-  <div id="myWork"></div>
+  <div id="myWork">
+    <div class="pre-detail-work"></div>
+    <div class="btn-back-work">Back</div>
+    <div class="myWork-Content">
+      <h2>Sorry, under construction</h2>
+    </div>
+  </div>
 
 </body>
 
@@ -60,6 +80,7 @@
     $("#myProfile").hide();
     $("#myWork").hide();
     $(".menu").hide();
+    $(".btn-back-work").hide();
 
     setTimeout(function(){ 
         $(".opening").fadeOut(1500);
@@ -76,17 +97,63 @@
         $(".menu-profile").click(function(){
           $(".menu-work").removeClass('menu-work').addClass("menu-choosen-work");
           $(".upper-content").removeClass('upper-content').addClass("menu-choosen");
+          $(".menu-profile").removeClass('menu-profile').addClass('selected-menu-profile');
 
           $("#myProfile").show();
+          setTimeout(function(){
+            $(".pre-detail-profile").removeClass('pre-detail-profile').addClass('detail');
+            $(".btn-back-profile").show();
+            $(".btn-back-profile").removeClass('.btn-back-profile').addClass('button-back-profile');
+
+            $(".button-back-profile").click(function(){
+              $("#myProfile").hide();
+                $(".menu-choosen-work").removeClass('menu-choosen-work').addClass("menu-work");
+                $(".menu-choosen").removeClass('menu-choosen').addClass("upper-content");
+                $(".selected-menu-profile").removeClass('selected-menu-profile').addClass('menu-profile');
+            });
+          },800);
         });
 
         $(".menu-work").click(function(){
           $(".menu-profile").removeClass('menu-profile').addClass("menu-choosen-profile");
           $(".upper-content").removeClass('upper-content').addClass("menu-choosen");
+          $(".menu-work").removeClass('menu-work').addClass('selected-menu-work');
 
-          $("#myProfile").show();
+          $("#myWork").show();
+          setTimeout(function(){
+            $(".pre-detail-work").removeClass('pre-detail-work').addClass('detail');
+            $(".btn-back-work").show();
+            $(".btn-back-work").removeClass('.btn-back-work').addClass('button-back-work');
+
+            $(".button-back-work").click(function(){
+              $("#myWork").hide();
+                $(".menu-choosen-profile").removeClass('menu-choosen-profile').addClass("menu-profile");
+                $(".menu-choosen").removeClass('menu-choosen').addClass("upper-content");
+                $(".selected-menu-work").removeClass('selected-menu-work').addClass('menu-work');
+            });
+          },800);
+          
         });
 
+        $(".fb").click(function(){
+            window.open('https://www.facebook.com/ignatius.a.pradana?ref=br_rs');
+        });
+
+        $(".ln").click(function(){
+            window.open('https://www.linkedin.com/in/ignatius-aldi-pradana-b5aa93129?ppe=1');
+        });
+
+        $(".contact").click(function(){
+            alert("Email : ign.aldi.pradana@gmail.com");
+        });
+
+        $(".github").click(function(){
+            window.open('https://github.com/igprad');
+        });
+
+        $(".myCV").click(function(){
+            alert("Sorry for now my CV can't be downloaded.");
+        });
     }, 8000);
     
   });

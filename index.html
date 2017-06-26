@@ -16,14 +16,15 @@
 
   <div class="opening">
     <div class="vertical-line"></div>
-    <div class="upper">
-      <div class="title">
-        <h1>Hello, there !</h1>
-        <p>I'm Ignatius Aldi Pradana. A Freelancer and Developer from Indonesia</p>
-      </div>
-    </div>
     <div class="tittle-progress-bar"><p>Please Wait</p></div>
     <div class="progress-bar"><span id="value-bar" class="value-progress"></span></div>
+  </div>
+
+  <div class="upper">
+    <div class="title">
+      <p id="header-text">Hello !<p>
+      <p>I'm Ignatius Aldi Pradana. A Freelancer and Developer from Indonesia</p>
+    </div>
   </div>
 
   <div id="content">
@@ -35,12 +36,6 @@
       <span class="github"></span>
     </div>
     <div class="myCV">Curriculum Vitae</div>
-    <div class="upper-content">
-      <div class="title">
-        <h1>Hello, there</h1>
-        <p>I'm Ignatius Aldi Pradana. A Freelancer and Developer from Indonesia</p>
-      </div>
-    </div>
     <div class="menu">
         <div class="menu-profile-non-aktif">
           <h4 class="title">Profile</h4>
@@ -87,6 +82,7 @@
         $(".opening").hide();
 
         $("#content").show();
+        $(".upper").removeClass('upper').addClass('upper-content');
     }, 6000);  
 
     setTimeout(function(){ 

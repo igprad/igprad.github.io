@@ -1,10 +1,16 @@
 body{
   background: #2a2a2a;
   height: 100%;
+  font-size: 2vh;
 }
+
 
 html {
   height: 100%;
+}
+
+#header-text {
+  font-size: 7vh;
 }
 
 .title{
@@ -61,8 +67,8 @@ html {
   top: 14%;
   position: absolute;
   border: 1.5px solid white;
-  left: 32%;
-  right: 32%;
+  left: 31%;
+  right: 31%;
   color: white;
   animation-name: rotate;
   animation-duration: 1.5s;
@@ -80,12 +86,12 @@ html {
   border-right:solid 1.5px white;
 }
 
-#content>.upper-content{
+.upper-content{
   top: 14%;
   position: absolute;
   border: 1.5px solid white;
-  left: 32%;
-  right: 32%;
+  left: 31%;
+  right: 31%;
   color: white;
   animation-name: preloading-content;
   animation-duration: 2s;
@@ -215,8 +221,10 @@ html {
 @keyframes preloading-content {
   100%{
     top: 35%;
-    left: 25%;
+    left: 18%;
     right: 45%;
+    padding-bottom: 2%;
+    text-align: center;
   }
 }
 
@@ -244,7 +252,7 @@ html {
 @keyframes pop-up-menu-work {
   100%{
     position: absolute;
-    top: 44%;
+    top: 48%;
     border-right: 1.5px solid white;
     left: 55%;
     right: 25%;
@@ -337,10 +345,10 @@ html {
 
 @keyframes border-show-menu{
   50%{
-    top:10%;
+    top:12.5%;
   }
   100%{
-    top:10%;
+    top:12.5%;
     bottom: 10%;
   }
 }
@@ -396,7 +404,7 @@ html {
 
 .button-back-profile{
     position: absolute;
-    top: 44%;
+    top: 50%;
     border-right: 1.5px solid white;
     left: 75%;
     right: 10%;
@@ -409,7 +417,7 @@ html {
 
 .button-back-work{
     position: absolute;
-    top: 55%;
+    top: 59%;
     border-right: 1.5px solid white;
     left: 75%;
     right: 10%;

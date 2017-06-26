@@ -345,7 +345,7 @@ html {
 
 @keyframes border-show-menu{
   50%{
-    top:12.5%;
+    top:12.5%;    
   }
   100%{
     top:12.5%;
@@ -394,12 +394,21 @@ html {
   top: 50%;
   bottom: 50%;
   left: 5%;
+  right:25%;  
+  z-index: 1;
+}
+
+.border-content {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 5%;
   right:25%;
   border-right: 1.5px solid white;
   animation-name: border-show-menu;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
 }
 
 .button-back-profile{
@@ -431,7 +440,59 @@ html {
 .myWork-Content, .myProfile-Content {
   color: white;
   position: absolute;
-  top: 40%;
-  left: 10%;
-  font-size: 5vw;
+  top: 12.5%;
+  left: 10%;  
+  font-size: 2.5vw;
+  bottom: 10%;
+  overflow-y: scroll;
+}
+
+.header-text-content {  
+  display: inline-block;
+  padding-left: 2%;
+  padding-right: 2%;
+  left: 5%;
+  right: 25%;
+  width: 64.9vw;
+  color: grey;  
+  background: white;
+  border-left: 3px solid grey;
+  z-index: -1;
+  opacity: 0;
+  animation-name: left-translate;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.profile-content {
+  font-size: 1vw;
+  display: block;
+  margin-top: -1%;
+  margin-bottom: 5vh;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1vw;
+  margin-left: 5vw;
+  border-left: 1px solid grey;
+  opacity: 0;
+  animation-name: left-translate;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent;
+}
+
+@keyframes left-translate {
+  50%{
+    opacity: 0;
+
+  }
+  100%{
+    opacity: 1;
+  }
 }

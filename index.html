@@ -47,19 +47,51 @@
   </div>
 
   <div id="myProfile">
+    <div class="border-pre"></div>
     <div class="pre-detail-profile"></div>
     <div class="btn-back-profile">Back</div>
-    <div class="myProfile-Content">
-      <p>Sorry, under construction</p>
+    <div class="myProfile-Content">      
+      <p class="header-text-content">I'am</p>
+      <div class="profile-content">
+        <p>Name : Ignatius Aldi Pradana</p>
+        <p>Birthday : 29 February 1996</p>
+        <p>Live : Yogyakarta, Indonesia</p>
+        <p>Email : ign.aldi.pradana@gmail.com</p>
+      </div>
+      <p class="header-text-content">Education</p>
+      <div class="profile-content">
+        <p>Bachelor : Universitas Atma Jaya Yogyakarta ( 2014 - Now )</p>
+      </div>
+      <p class="header-text-content">Experience</p>
+      <div class="profile-content">
+        <p>Assistant Lecturer : Algorithm Programming, OOP (UAJY)</p>
+        <p>Internship : Blibli.com (Future Program)</p>
+        <p>Love : C#, C++, Java, Javascript, HTML, CSS</p>
+      </div>
     </div>
   </div>
   </div>
 
   <div id="myWork">
+    <div class="border-pre"></div>
     <div class="pre-detail-work"></div>
     <div class="btn-back-work">Back</div>
     <div class="myWork-Content">
-      <p>Sorry, under construction</p>
+      <p class="header-text-content">Android Games - Forgotten Robot</p>
+      <div class="profile-content">
+        <p>This is my 2D game platformer</p>
+        <p>Link download : <span><a href="https://play.google.com/store/apps/details?id=com.sayang.mama&hl=in" target="_blank">Google Play</a></span></p>
+      </div>
+      <p class="header-text-content">Web Development - Barang Hilang</p>
+      <div class="profile-content">
+        <p>This is web service and web portal for developers to get Service of Lost thing(s).</p>
+        <p>The idea is to make web service that provides data for helping people find their lost item(s).</p>
+        <p><strong>Develops using :</strong></p>
+        <p><strong>Web Service :</strong> Java - Spring Framework</p>
+        <p><strong>Web Portal :</strong> Node - React</p>
+        <p><strong>Live App :</strong> <span><a href="portal-barang-hilang.azurewebsites.net" target="_blank">Barang Hilang</a></span></p>
+
+      </div>
     </div>
   </div>
 
@@ -97,6 +129,7 @@
 
           $("#myProfile").show();
           setTimeout(function(){
+            $(".border-pre").removeClass('border-pre').addClass("border-content");
             $(".pre-detail-profile").removeClass('pre-detail-profile').addClass('detail');
             $(".btn-back-profile").show();
             $(".btn-back-profile").removeClass('.btn-back-profile').addClass('button-back-profile');
